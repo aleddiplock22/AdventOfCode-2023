@@ -14,7 +14,7 @@ fn parse_line(raw_input_line: &str, part2: &bool) -> Vec<u64> {
             .skip(1)  // similar to below this skips the "X:" bit at the start
             .collect::<Vec<&str>>()  // this then collects it all into a vector
             .join("")  // this joins together like python "".join(list[str])
-            .parse();
+            .parse();  // may have been able to do unwrap here to stop it eing a Result type thing and make it the int, then wouldn't need an expect?
 
         return vec![x.expect("Should be a u64?")];    
     }
